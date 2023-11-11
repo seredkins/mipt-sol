@@ -1,0 +1,275 @@
+{
+    "contractName": "Crowdsale",
+    "abi": [
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "owner",
+                    "type": "address"
+                }
+            ],
+            "name": "OwnableInvalidOwner",
+            "type": "error"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                }
+            ],
+            "name": "OwnableUnauthorizedAccount",
+            "type": "error"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "previousOwner",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "newOwner",
+                    "type": "address"
+                }
+            ],
+            "name": "OwnershipTransferred",
+            "type": "event"
+        },
+        {
+            "inputs": [],
+            "name": "owner",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "renounceOwnership",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "newOwner",
+                    "type": "address"
+                }
+            ],
+            "name": "transferOwnership",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"OwnableInvalidOwner\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"OwnableUnauthorizedAccount\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"errors\":{\"OwnableInvalidOwner(address)\":[{\"details\":\"The owner is not a valid owner account. (eg. `address(0)`)\"}],\"OwnableUnauthorizedAccount(address)\":[{\"details\":\"The caller account is not authorized to perform an operation.\"}]},\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/seredkings/Library/Mobile Documents/com~apple~CloudDocs/mipt/sol/hw2/Crowdsale.sol\":\"Crowdsale\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/seredkings/Library/Mobile Documents/com~apple~CloudDocs/mipt/sol/hw2/Crowdsale.sol\":{\"keccak256\":\"0xbbb8ad04d581fabb5437d4378dc6f2426b642e804427b7eed469205affa2c3f6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://746d8ba59d8fafced0b90b4e6bed114a83b54327486776f603df214961c73e52\",\"dweb:/ipfs/QmZwAAccZNgHXaUM7RqJu4kWV66TKC5Yu63bb9G4qgTrkn\"]},\"/Users/seredkings/Library/Mobile Documents/com~apple~CloudDocs/mipt/sol/node_modules/@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8ed324d3920bb545059d66ab97d43e43ee85fd3bd52e03e401f020afb0b120f6\",\"dweb:/ipfs/QmfEckWLmZkDDcoWrkEvMWhms66xwTLff9DDhegYpvHo1a\"]},\"/Users/seredkings/Library/Mobile Documents/com~apple~CloudDocs/mipt/sol/node_modules/@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x75a4ee64c68dbd5f38bddd06e664a64c8271b4caa554fb6f0607dfd672bb4bf3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0c4e6cb30d3601e2f7af5af09e265508147cb275a8dcd99d6f7363645cc56867\",\"dweb:/ipfs/QmNgFkoXNWoUbAyw71rr1sKQ95Rj2GfvYiWg79xEYDn2NY\"]}},\"version\":1}",
+    "bytecode": "608060405234801561000f575f80fd5b50338061003557604051631e4fbdf760e01b81525f600482015260240160405180910390fd5b61003e81610044565b50610093565b5f80546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b6101b1806100a05f395ff3fe608060405234801561000f575f80fd5b506004361061003f575f3560e01c8063715018a6146100435780638da5cb5b1461004d578063f2fde38b1461006b575b5f80fd5b61004b61007e565b005b5f54604080516001600160a01b039092168252519081900360200190f35b61004b61007936600461014e565b610091565b6100866100d3565b61008f5f6100ff565b565b6100996100d3565b6001600160a01b0381166100c757604051631e4fbdf760e01b81525f60048201526024015b60405180910390fd5b6100d0816100ff565b50565b5f546001600160a01b0316331461008f5760405163118cdaa760e01b81523360048201526024016100be565b5f80546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b5f6020828403121561015e575f80fd5b81356001600160a01b0381168114610174575f80fd5b939250505056fea264697066735822122008bb1da1ec9533a2f6d276b51b44d5ef14af90f59a17345e956a67e65bc2e1ee64736f6c63430008170033",
+    "deployedBytecode": "608060405234801561000f575f80fd5b506004361061003f575f3560e01c8063715018a6146100435780638da5cb5b1461004d578063f2fde38b1461006b575b5f80fd5b61004b61007e565b005b5f54604080516001600160a01b039092168252519081900360200190f35b61004b61007936600461014e565b610091565b6100866100d3565b61008f5f6100ff565b565b6100996100d3565b6001600160a01b0381166100c757604051631e4fbdf760e01b81525f60048201526024015b60405180910390fd5b6100d0816100ff565b50565b5f546001600160a01b0316331461008f5760405163118cdaa760e01b81523360048201526024016100be565b5f80546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b5f6020828403121561015e575f80fd5b81356001600160a01b0381168114610174575f80fd5b939250505056fea264697066735822122008bb1da1ec9533a2f6d276b51b44d5ef14af90f59a17345e956a67e65bc2e1ee64736f6c63430008170033",
+    "sourceMap": "198:76:0:-:0;;;235:36;;;;;;;;;-1:-1:-1;257:10:0;;1269:95:1;;1322:31;;-1:-1:-1;;;1322:31:1;;1350:1;1322:31;;;160:51:3;133:18;;1322:31:1;;;;;;;1269:95;1373:32;1392:12;1373:18;:32::i;:::-;1225:187;198:76:0;;2912:187:1;2985:16;3004:6;;-1:-1:-1;;;;;3020:17:1;;;-1:-1:-1;;;;;;3020:17:1;;;;;;3052:40;;3004:6;;;;;;;3052:40;;2985:16;3052:40;2975:124;2912:187;:::o;14:203:3:-;198:76:0;;;;;;",
+    "deployedSourceMap": "198:76:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2293:101:1;;;:::i;:::-;;1638:85;1684:7;1710:6;1638:85;;;-1:-1:-1;;;;;1710:6:1;;;160:51:3;;1638:85:1;;;;;148:2:3;1638:85:1;;;2543:215;;;;;;:::i;:::-;;:::i;2293:101::-;1531:13;:11;:13::i;:::-;2357:30:::1;2384:1;2357:18;:30::i;:::-;2293:101::o:0;2543:215::-;1531:13;:11;:13::i;:::-;-1:-1:-1;;;;;2627:22:1;::::1;2623:91;;2672:31;::::0;-1:-1:-1;;;2672:31:1;;2700:1:::1;2672:31;::::0;::::1;160:51:3::0;133:18;;2672:31:1::1;;;;;;;;2623:91;2723:28;2742:8;2723:18;:28::i;:::-;2543:215:::0;:::o;1796:162::-;1684:7;1710:6;-1:-1:-1;;;;;1710:6:1;735:10:2;1855:23:1;1851:101;;1901:40;;-1:-1:-1;;;1901:40:1;;735:10:2;1901:40:1;;;160:51:3;133:18;;1901:40:1;14:203:3;2912:187:1;2985:16;3004:6;;-1:-1:-1;;;;;3020:17:1;;;-1:-1:-1;;;;;;3020:17:1;;;;;;3052:40;;3004:6;;;;;;;3052:40;;2985:16;3052:40;2975:124;2912:187;:::o;222:286:3:-;281:6;334:2;322:9;313:7;309:23;305:32;302:52;;;350:1;347;340:12;302:52;376:23;;-1:-1:-1;;;;;428:31:3;;418:42;;408:70;;474:1;471;464:12;408:70;497:5;222:286;-1:-1:-1;;;222:286:3:o",
+    "sourcePath": "/Users/seredkings/Library/Mobile Documents/com~apple~CloudDocs/mipt/sol/hw2/Crowdsale.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.23+commit.f704f362"
+    },
+    "ast": {
+        "absolutePath": "/Users/seredkings/Library/Mobile Documents/com~apple~CloudDocs/mipt/sol/hw2/Crowdsale.sol",
+        "exportedSymbols": {
+            "Context": [
+                183
+            ],
+            "Crowdsale": [
+                13
+            ],
+            "Ownable": [
+                161
+            ]
+        },
+        "id": 14,
+        "license": "MIT",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    "0.8",
+                    ".23"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "34:23:0"
+            },
+            {
+                "absolutePath": "/Users/seredkings/Library/Mobile Documents/com~apple~CloudDocs/mipt/sol/node_modules/@openzeppelin/contracts/access/Ownable.sol",
+                "file": "/Users/seredkings/Library/Mobile Documents/com~apple~CloudDocs/mipt/sol/node_modules/@openzeppelin/contracts/access/Ownable.sol",
+                "id": 2,
+                "nameLocation": "-1:-1:-1",
+                "nodeType": "ImportDirective",
+                "scope": 14,
+                "sourceUnit": 162,
+                "src": "59:137:0",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "abstract": false,
+                "baseContracts": [
+                    {
+                        "baseName": {
+                            "id": 3,
+                            "name": "Ownable",
+                            "nameLocations": [
+                                "220:7:0"
+                            ],
+                            "nodeType": "IdentifierPath",
+                            "referencedDeclaration": 161,
+                            "src": "220:7:0"
+                        },
+                        "id": 4,
+                        "nodeType": "InheritanceSpecifier",
+                        "src": "220:7:0"
+                    }
+                ],
+                "canonicalName": "Crowdsale",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 13,
+                "linearizedBaseContracts": [
+                    13,
+                    161,
+                    183
+                ],
+                "name": "Crowdsale",
+                "nameLocation": "207:9:0",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "body": {
+                            "id": 11,
+                            "nodeType": "Block",
+                            "src": "269:2:0",
+                            "statements": []
+                        },
+                        "id": 12,
+                        "implemented": true,
+                        "kind": "constructor",
+                        "modifiers": [
+                            {
+                                "arguments": [
+                                    {
+                                        "expression": {
+                                            "id": 7,
+                                            "name": "msg",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 4294967281,
+                                            "src": "257:3:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_magic_message",
+                                                "typeString": "msg"
+                                            }
+                                        },
+                                        "id": 8,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberLocation": "261:6:0",
+                                        "memberName": "sender",
+                                        "nodeType": "MemberAccess",
+                                        "src": "257:10:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    }
+                                ],
+                                "id": 9,
+                                "kind": "baseConstructorSpecifier",
+                                "modifierName": {
+                                    "id": 6,
+                                    "name": "Ownable",
+                                    "nameLocations": [
+                                        "249:7:0"
+                                    ],
+                                    "nodeType": "IdentifierPath",
+                                    "referencedDeclaration": 161,
+                                    "src": "249:7:0"
+                                },
+                                "nodeType": "ModifierInvocation",
+                                "src": "249:19:0"
+                            }
+                        ],
+                        "name": "",
+                        "nameLocation": "-1:-1:-1",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 5,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "246:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 10,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "269:0:0"
+                        },
+                        "scope": 13,
+                        "src": "235:36:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 14,
+                "src": "198:76:0",
+                "usedErrors": [
+                    27,
+                    32
+                ],
+                "usedEvents": [
+                    38
+                ]
+            }
+        ],
+        "src": "34:241:0"
+    },
+    "functionHashes": {
+        "owner()": "8da5cb5b",
+        "renounceOwnership()": "715018a6",
+        "transferOwnership(address)": "f2fde38b"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "86600",
+            "executionCost": "25995",
+            "totalCost": "112595"
+        },
+        "external": {
+            "owner()": "2290",
+            "renounceOwnership()": "infinite",
+            "transferOwnership(address)": "28316"
+        }
+    }
+}
